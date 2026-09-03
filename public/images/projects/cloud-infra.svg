@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1322" />
+      <stop offset="100%" stop-color="#060910" />
+    </linearGradient>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="coralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7a59" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Cloud Header Dashboard -->
+  <rect x="30" y="24" width="740" height="40" rx="8" fill="#131c2e" stroke="#223048" stroke-width="1" />
+  <circle cx="50" cy="44" r="5" fill="#38bdf8" />
+  <text x="65" y="49" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold" fill="#f8fafc">Cloud Infrastructure Console — VPC [10.100.0.0/16] Production Cluster</text>
+  <rect x="670" y="32" width="85" height="24" rx="4" fill="#22c55e" fill-opacity="0.2" stroke="#22c55e" stroke-width="1" />
+  <text x="682" y="48" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="bold" fill="#4ade80">● HEALTHY</text>
+
+  <!-- VPC Outer Boundary -->
+  <rect x="50" y="85" width="700" height="380" rx="12" fill="#0f1624" stroke="#ff7a59" stroke-width="1.5" stroke-dasharray="6 4" />
+  <rect x="70" y="74" width="170" height="22" rx="4" fill="#ff7a59" />
+  <text x="80" y="89" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" fill="#ffffff">VPC Region: ap-southeast-1</text>
+
+  <!-- Internet Gateway / Client Traffic -->
+  <g transform="translate(140, 180)">
+    <circle cx="0" cy="0" r="32" fill="#1a2538" stroke="#38bdf8" stroke-width="2" filter="url(#glow)" />
+    <path d="M-10 -5 C-12 -12 -5 -18 3 -16 C8 -22 20 -18 20 -10 C24 -8 24 2 18 4 L-10 4 C-16 4 -16 -4 -10 -5 Z" fill="#38bdf8" />
+    <text x="0" y="50" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" fill="#ffffff">Internet Gateway</text>
+    <text x="0" y="64" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8">0.0.0.0/0</text>
+  </g>
+
+  <!-- Connection line to Load Balancer -->
+  <line x1="172" y1="180" x2="310" y2="180" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 3" />
+
+  <!-- Application Load Balancer -->
+  <g transform="translate(350, 180)">
+    <rect x="-40" y="-35" width="80" height="70" rx="8" fill="#1a2538" stroke="#ff7a59" stroke-width="2" filter="url(#glow)" />
+    <!-- Balance Symbol -->
+    <circle cx="0" cy="-12" r="6" fill="#ff7a59" />
+    <line x1="-20" y1="15" x2="0" y2="-12" stroke="#ff7a59" stroke-width="2" />
+    <line x1="20" y1="15" x2="0" y2="-12" stroke="#ff7a59" stroke-width="2" />
+    <circle cx="-20" cy="15" r="5" fill="#38bdf8" />
+    <circle cx="20" cy="15" r="5" fill="#38bdf8" />
+    <text x="0" y="52" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" fill="#ffffff">App Load Balancer</text>
+    <text x="0" y="66" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#ff7a59">HTTPS :443 SSL</text>
+  </g>
+
+  <!-- Connections from ALB to VM / Container Instances -->
+  <path d="M390 180 L490 140" stroke="#ff7a59" stroke-width="2" stroke-dasharray="4 3" />
+  <path d="M390 180 L490 240" stroke="#ff7a59" stroke-width="2" stroke-dasharray="4 3" />
+  <path d="M390 180 L490 340" stroke="#ff7a59" stroke-width="2" stroke-dasharray="4 3" />
+
+  <!-- Compute Instance 1 (Web Tier A) -->
+  <g transform="translate(560, 140)">
+    <rect x="-65" y="-24" width="130" height="48" rx="6" fill="#1a2538" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="-45" cy="0" r="4" fill="#22c55e" />
+    <text x="-32" y="-3" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="bold" fill="#ffffff">VM-Node-01</text>
+    <text x="-32" y="12" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8">2 vCPU / 4GB (AZ-1a)</text>
+  </g>
+
+  <!-- Compute Instance 2 (Web Tier B) -->
+  <g transform="translate(560, 240)">
+    <rect x="-65" y="-24" width="130" height="48" rx="6" fill="#1a2538" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="-45" cy="0" r="4" fill="#22c55e" />
+    <text x="-32" y="-3" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="bold" fill="#ffffff">VM-Node-02</text>
+    <text x="-32" y="12" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8">2 vCPU / 4GB (AZ-1b)</text>
+  </g>
+
+  <!-- Database Managed Instance (Private Subnet) -->
+  <g transform="translate(560, 340)">
+    <rect x="-65" y="-24" width="130" height="48" rx="6" fill="#1a2538" stroke="#ff7a59" stroke-width="1.5" />
+    <circle cx="-45" cy="0" r="4" fill="#ff7a59" />
+    <text x="-32" y="-3" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="bold" fill="#ffffff">DB-PostgreSQL</text>
+    <text x="-32" y="12" font-family="'JetBrains Mono', monospace" font-size="9" fill="#ff7a59">Replica + Auto-Backup</text>
+  </g>
+
+  <!-- Auto Scaling Badge -->
+  <g transform="translate(180, 360)">
+    <rect x="-80" y="-25" width="160" height="50" rx="6" fill="#131d2e" stroke="#223048" stroke-width="1" />
+    <text x="0" y="-4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" fill="#38bdf8">Auto-Scaling Group</text>
+    <text x="0" y="12" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8">Min: 2 | Desired: 2 | Max: 6</text>
+  </g>
+</svg>

@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #0c1017;
+    --bg-surface: #121722;
+    --bg-card: #171e2d;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-highlight: rgba(255, 107, 74, 0.3);
+    --accent-coral: #ff6b4a;
+    --accent-orange: #ea580c;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: #e2e8f0;
+    font-family: 'Plus Jakarta Sans', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0c1017;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #232b3d;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff6b4a;
+  }
+}
+
+/* Typography Helpers */
+.font-display {
+  font-family: 'Poppins', 'Plus Jakarta Sans', sans-serif;
+}
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Gradient Utilities */
+.coral-gradient {
+  background: linear-gradient(135deg, #ff7a59 0%, #ea580c 100%);
+}
+
+.coral-gradient-hover:hover {
+  background: linear-gradient(135deg, #ff8c6d 0%, #f97316 100%);
+}
+
+.coral-gradient-text {
+  background: linear-gradient(135deg, #ff8a6a 0%, #ff5722 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-coral {
+  box-shadow: 0 0 35px -5px rgba(255, 107, 74, 0.45);
+}
+
+.glow-coral-sm {
+  box-shadow: 0 0 15px 0 rgba(255, 107, 74, 0.25);
+}
+
+.glow-coral-subtle {
+  box-shadow: 0 10px 40px -10px rgba(255, 107, 74, 0.2);
+}
+
+/* Glassmorphism Styles */
+.glass-nav {
+  background: rgba(12, 16, 23, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-card {
+  background: linear-gradient(180deg, rgba(23, 30, 45, 0.75) 0%, rgba(16, 21, 32, 0.85) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 107, 74, 0.35);
+}
+
+.glass-badge {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Orbit line style */
+.orbit-ring {
+  border: 1.5px dashed rgba(255, 107, 74, 0.22);
+  border-radius: 9999px;
+}
+
+.orbit-ring-outer {
+  border: 1px dashed rgba(255, 255, 255, 0.09);
+  border-radius: 9999px;
+}
+
+/* Animations */
+@keyframes floatSlow1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes floatSlow2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(12px) rotate(-2deg);
+  }
+}
+
+@keyframes floatSlow3 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-8px) translateX(6px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float-1 {
+  animation: floatSlow1 4.5s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: floatSlow2 5.5s ease-in-out infinite;
+}
+
+.animate-float-3 {
+  animation: floatSlow3 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 80s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spinSlow 95s linear infinite reverse;
+}
+
+/* Background grid pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}

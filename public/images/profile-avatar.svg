@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#182030" />
+      <stop offset="60%" stop-color="#0e131d" />
+      <stop offset="100%" stop-color="#080b10" />
+    </linearGradient>
+    <radialGradient id="rimGlow" cx="70%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ff7a59" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#ea580c" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#0c1017" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8b997" />
+      <stop offset="100%" stop-color="#cf9873" />
+    </linearGradient>
+    <linearGradient id="skinShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c48a62" />
+      <stop offset="100%" stop-color="#a46d47" />
+    </linearGradient>
+    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a3346" />
+      <stop offset="60%" stop-color="#1a202c" />
+      <stop offset="100%" stop-color="#121620" />
+    </linearGradient>
+    <linearGradient id="suitLapel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b4860" />
+      <stop offset="100%" stop-color="#1d2433" />
+    </linearGradient>
+    <linearGradient id="coralAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7a59" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#d1d5db" />
+    </linearGradient>
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <clipPath id="circleClip">
+      <circle cx="250" cy="250" r="238" />
+    </clipPath>
+  </defs>
+
+  <!-- Background Base -->
+  <circle cx="250" cy="250" r="248" fill="url(#bgGrad)" />
+  <circle cx="250" cy="250" r="248" fill="url(#rimGlow)" />
+
+  <!-- Embedded Content Clipped -->
+  <g clip-path="url(#circleClip)">
+    <!-- Ambient Tech Grid in Background -->
+    <g opacity="0.12" stroke="#ff7a59" stroke-width="1">
+      <line x1="50" y1="0" x2="50" y2="500" />
+      <line x1="150" y1="0" x2="150" y2="500" />
+      <line x1="250" y1="0" x2="250" y2="500" />
+      <line x1="350" y1="0" x2="350" y2="500" />
+      <line x1="450" y1="0" x2="450" y2="500" />
+      <line x1="0" y1="100" x2="500" y2="100" />
+      <line x1="0" y1="200" x2="500" y2="200" />
+      <line x1="0" y1="300" x2="500" y2="300" />
+      <line x1="0" y1="400" x2="500" y2="400" />
+      <circle cx="350" cy="150" r="3" fill="#ff7a59" />
+      <circle cx="150" cy="120" r="2" fill="#ff7a59" />
+      <circle cx="400" cy="280" r="2" fill="#ff7a59" />
+    </g>
+
+    <!-- Warm backlight halo -->
+    <ellipse cx="250" cy="190" rx="140" ry="150" fill="#ff6b4a" opacity="0.15" filter="url(#glowEffect)" />
+
+    <!-- Shoulders & Suit Torso -->
+    <path d="M70 500 C80 390 140 330 250 330 C360 330 420 390 430 500 Z" fill="url(#suitGrad)" />
+    
+    <!-- White Shirt Collar & Tie -->
+    <polygon points="250,330 215,395 285,395" fill="url(#shirtGrad)" />
+    <!-- Modern Orange/Coral Tie -->
+    <polygon points="245,360 255,360 260,490 250,510 240,490" fill="url(#coralAccent)" />
+    <!-- Tie Knot -->
+    <polygon points="242,350 258,350 255,368 245,368" fill="#d9480f" />
+
+    <!-- Suit Lapels -->
+    <!-- Left Lapel -->
+    <path d="M170 340 L218 450 L250 450 L195 332 Z" fill="url(#suitLapel)" />
+    <path d="M170 340 L135 410 L195 440 L218 450 Z" fill="#1b212d" />
+    <!-- Right Lapel -->
+    <path d="M330 340 L282 450 L250 450 L305 332 Z" fill="url(#suitLapel)" />
+    <path d="M330 340 L365 410 L305 440 L282 450 Z" fill="#1b212d" />
+
+    <!-- Crossed Arms Silhouette / Suit folds -->
+    <path d="M120 440 C140 480 200 495 250 495 C300 495 360 480 380 440 C340 470 280 475 250 475 C220 475 160 470 120 440 Z" fill="#0f141d" opacity="0.6" />
+
+    <!-- Neck -->
+    <path d="M215 250 L215 340 C235 352 265 352 285 340 L285 250 Z" fill="url(#skinShadow)" />
+    <path d="M220 260 L220 330 C238 340 262 340 280 330 L280 260 Z" fill="url(#skinGrad)" />
+
+    <!-- Head & Face -->
+    <path d="M175 185 C175 275 210 310 250 310 C290 310 325 275 325 185 C325 110 290 90 250 90 C210 90 175 110 175 185 Z" fill="url(#skinGrad)" />
+    <!-- Cheek/Jaw Shadow -->
+    <path d="M180 220 C185 275 215 305 250 305 C285 305 315 275 320 220 C305 285 265 300 250 300 C235 300 195 285 180 220 Z" fill="url(#skinShadow)" opacity="0.4" />
+
+    <!-- Ears -->
+    <ellipse cx="174" cy="195" rx="12" ry="22" fill="url(#skinShadow)" />
+    <ellipse cx="176" cy="195" rx="8" ry="15" fill="url(#skinGrad)" />
+    <ellipse cx="326" cy="195" rx="12" ry="22" fill="url(#skinShadow)" />
+    <ellipse cx="324" cy="195" rx="8" ry="15" fill="url(#skinGrad)" />
+
+    <!-- Modern Styled Hair -->
+    <path d="M170 160 C165 115 195 72 250 70 C305 68 335 105 330 150 C322 135 305 110 270 108 C230 105 190 120 170 160 Z" fill="#141821" />
+    <path d="M172 155 C185 110 225 80 265 82 C300 84 326 105 332 145 C320 120 295 100 260 98 C220 95 188 115 172 155 Z" fill="#202736" />
+    <!-- Hair Volume Top Texture -->
+    <path d="M220 74 C255 65 295 72 320 90 C290 80 250 78 220 74 Z" fill="#303a4f" />
+
+    <!-- Eyebrows -->
+    <path d="M195 168 C208 162 225 163 234 168" stroke="#141821" stroke-width="4.5" stroke-linecap="round" fill="none" />
+    <path d="M266 168 C275 163 292 162 305 168" stroke="#141821" stroke-width="4.5" stroke-linecap="round" fill="none" />
+
+    <!-- Eyes -->
+    <ellipse cx="214" cy="182" rx="11" ry="7" fill="#ffffff" />
+    <ellipse cx="286" cy="182" rx="11" ry="7" fill="#ffffff" />
+    <!-- Irises -->
+    <circle cx="215" cy="182" r="5.5" fill="#1e2430" />
+    <circle cx="285" cy="182" r="5.5" fill="#1e2430" />
+    <!-- Catchlights -->
+    <circle cx="213" cy="180" r="2" fill="#ffffff" />
+    <circle cx="283" cy="180" r="2" fill="#ffffff" />
+    <!-- Eyelids -->
+    <path d="M202 178 C210 173 220 173 226 178" stroke="#7a4e32" stroke-width="1.8" fill="none" />
+    <path d="M274 178 C280 173 290 173 298 178" stroke="#7a4e32" stroke-width="1.8" fill="none" />
+
+    <!-- Nose -->
+    <path d="M248 180 L244 212 C246 216 254 216 256 212 L252 180" stroke="#b87d55" stroke-width="2.5" stroke-linecap="round" fill="none" />
+    <ellipse cx="242" cy="214" rx="3" ry="1.5" fill="#9e6642" />
+    <ellipse cx="258" cy="214" rx="3" ry="1.5" fill="#9e6642" />
+
+    <!-- Confident Smile -->
+    <path d="M228 245 C238 258 262 258 272 245" stroke="#9e4b38" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M232 247 C242 256 258 256 268 247" fill="#ffffff" />
+
+    <!-- Subtle Orange Rim Light on Right Edge -->
+    <path d="M322 135 C328 175 324 230 312 280 C340 330 395 385 418 470" stroke="url(#coralAccent)" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.65" filter="url(#glowEffect)" />
+  </g>
+
+  <!-- High-Tech Outer Ring Overlay -->
+  <circle cx="250" cy="250" r="242" fill="none" stroke="url(#coralAccent)" stroke-width="3" stroke-opacity="0.85" />
+  <circle cx="250" cy="250" r="246" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.2" />
+</svg>

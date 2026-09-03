@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="coralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7a59" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="100" height="100" rx="28" fill="#0c1017" />
+  <rect x="2" y="2" width="96" height="96" rx="26" fill="none" stroke="url(#coralGrad)" stroke-width="2" stroke-opacity="0.4" />
+  <!-- Letter D with network node dot -->
+  <path d="M32 26 H48 C64 26 74 36 74 50 C74 64 64 74 48 74 H32 Z" fill="none" stroke="url(#coralGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+  <circle cx="50" cy="50" r="4.5" fill="#ff7a59" />
+  <line x1="32" y1="50" x2="45.5" y2="50" stroke="#ff7a59" stroke-width="3" stroke-dasharray="2 3" />
+</svg>
