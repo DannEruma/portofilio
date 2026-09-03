@@ -18,7 +18,7 @@ export const personalData = {
     github: "https://github.com/DannEruma",
     linkedin: "https://www.linkedin.com/in/dhaniputrasetiawan17/",
     instagram: "https://www.instagram.com/dannptrs/",
-    email: "mailto:dhaniputrasetiawan17@gmail.com"
+    email: "https://mail.google.com/mail/?view=cm&fs=1&to=dhaniputrasetiawan17@gmail.com"
   },
   socialHandles: {
     github: "@DannEruma",

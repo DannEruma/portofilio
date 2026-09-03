@@ -122,8 +122,13 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="text-slate-500 text-[10px] uppercase font-sans font-bold">Email Direct</div>
-                    <a href={`mailto:${personalData.email}`} className="text-slate-200 hover:text-[#ff7a59] transition-colors">
-                      {personalData.socialHandles.email}
+                    <a
+                      href={personalData.socials.email}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-200 hover:text-[#ff7a59] transition-colors"
+                    >
+                      {personalData.email}
                     </a>
                   </div>
                 </div>

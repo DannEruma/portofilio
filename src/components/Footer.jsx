@@ -90,6 +90,8 @@ const Footer = () => {
               </a>
               <a
                 href={personalData.socials.email}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2.5 rounded-xl bg-white/5 hover:bg-[#ff7a59] text-slate-300 hover:text-white transition-all duration-200 border border-white/10"
                 aria-label="Email Contact"
               >
