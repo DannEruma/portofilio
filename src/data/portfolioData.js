@@ -15,13 +15,13 @@ export const personalData = {
   availableFor: "Internships & Projects",
   email: "dhaniputrasetiawan17@gmail.com",
   socials: {
-    github: "https://github.com/DanEruma",
+    github: "https://github.com/DannEruma",
     linkedin: "https://www.linkedin.com/in/dhaniputrasetiawan17/",
     instagram: "https://www.instagram.com/dannptrs/",
     email: "mailto:dhaniputrasetiawan17@gmail.com"
   },
   socialHandles: {
-    github: "@DanEruma",
+    github: "@DannEruma",
     linkedin: "in/dhaniputrasetiawan17",
     instagram: "@dannptrs",
     email: "dhaniputrasetiawan17"
